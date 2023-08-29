@@ -11,7 +11,6 @@ interface User {
 
 
 function UserTag({ user }: { user: User }) {
-  console.log("User", user)
   return (
     <div className=''>
       {user ?

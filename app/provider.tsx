@@ -7,8 +7,6 @@ interface ProviderProps {
 }
 
 function Provider({ children }: ProviderProps) {
-
-  console.log(children)
   return (
     <SessionProvider >
         {children}

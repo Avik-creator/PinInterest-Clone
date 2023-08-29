@@ -19,7 +19,6 @@ interface PinItemProps {
 }
 
 function PinItem({ item }: PinItemProps) {
-  console.log(item);
   const router=useRouter();
   const user = {
     name: item?.userName,

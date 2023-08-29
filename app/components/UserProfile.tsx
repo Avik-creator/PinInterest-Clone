@@ -14,7 +14,6 @@ interface UserProfileProps {
 }
 
 const UserProfile: React.FC<UserProfileProps> = ({ userInfo }) => {
-  console.log(userInfo);
     const router=useRouter();
     const {data:session}=useSession()
     const onLogoutClick=()=>{
