@@ -4,10 +4,11 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import Image from 'next/image';
 
 interface User {
-  name: string;
-  email: string;
-  image: string;
+  name?: string | null | undefined;
+  email?: string | null | undefined;
+  image?: string | null | undefined;
 }
+
 
 function UserTag({ user }: { user: User }) {
   console.log("User", user)
@@ -15,7 +16,7 @@ function UserTag({ user }: { user: User }) {
     <div className=''>
       {user ?
         <div className='flex gap-3 items-center'>
-          <Image src={user.image}
+          <Image src={user.image as string}
             alt='userImage'
             width={45}
             height={45}

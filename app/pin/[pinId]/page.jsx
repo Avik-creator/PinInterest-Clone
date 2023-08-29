@@ -7,6 +7,8 @@ import app from '@/app/Shared/firebaseConfig'
 import { HiArrowSmallLeft } from "react-icons/hi2";
 import { useRouter } from 'next/navigation'
 function PinDetail({params}) {
+
+  console.log("PARAMS", params)
   const router=useRouter();
   const db=getFirestore(app);
   const [pinDetail,setPinDetail]=useState([]);
@@ -17,7 +19,6 @@ function PinDetail({params}) {
       const docRef = doc(db, 'pinterest-post',params.pinId );
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
-       
         setPinDetail(docSnap?.data())
       } else {
        

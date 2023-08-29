@@ -94,7 +94,7 @@ const [link, setLink] = useState<string>('');
             <h2 className="text-[12px] mb-8 w-full  text-gray-400">
               The first 40 Charaters are what usually show up in feeds
             </h2>
-            <UserTag user={session?.user} />
+            {session?.user && <UserTag user={session?.user} />}
             <textarea
               onChange={(e) => setDesc(e?.target?.value)}
               placeholder="Tell everyone what your pin is about"
