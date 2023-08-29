@@ -2,11 +2,8 @@ import React from "react";
 import { DocumentData } from "firebase/firestore";
 import PinItem from "./PinItem";
 
-interface PinListProps {
-  listOfPins: DocumentData[];
-}
 
-const PinList: React.FC<PinListProps> = ({ listOfPins }) => {
+const PinList = ({ listOfPins }) => {
   return (
     <div
       className="mt-7 px-2 md:px-5
